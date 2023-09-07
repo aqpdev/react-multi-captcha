@@ -121,7 +121,7 @@ In the example above the captchaTools.solvemediaResponse will return a JSON data
 params to validate the captcha:
 ```json
     { 
-        adcopy_challenge: "2@OcL8CfF6AXq5V79D.or2J7Snm34ew13313sd13rn", 
-        adcopy_response: "magic eight ball" 
+        "adcopy_challenge": "2@OcL8CfF6AXq5V79D.or2J7Snm34ew13313sd13rn", 
+        "adcopy_response": "magic eight ball" 
     }
 ```
