@@ -1,6 +1,6 @@
 {
   "name": "@aqpdev/react-multi-captcha",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Component to integrate reCAPTCHA v2 and v3, hCaptcha and SolveMedia captcha",
   "main": "index.js",
   "type": "module",
