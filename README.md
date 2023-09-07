@@ -3,14 +3,14 @@ React Component to integrate reCAPTCHA v2 and v3, hCaptcha and SolveMedia captch
 ## Installation
 
 ```bash
-npm i react-multi-captcha
+npm i @aqpdev/react-multi-captcha
 ```
 ## Usage
 
 ### Global Component:
 ```javascript
 import React, {useEffect, useRef} from "react"
-import {Captcha} from "react-multi-captcha";
+import {Captcha} from "@aqpdev/react-multi-captcha";
 
 export function Page()
 {
@@ -51,7 +51,7 @@ export function Page()
 ### Single Component
 ```javascript
 import React, {useEffect, useRef} from "react"
-import {RecaptchaV2, RecaptchaV3, HCaptcha, SolveMedia} from "react-multi-captcha";
+import {RecaptchaV2, RecaptchaV3, HCaptcha, SolveMedia} from "@aqpdev/react-multi-captcha";
 
 export function Page()
 {
@@ -88,7 +88,7 @@ export function Page()
 **Reset Captcha**
 ```javascript
 import React, {useEffect, useRef} from "react"
-import {RecaptchaV2, captchaTools} from "react-multi-captcha";
+import {RecaptchaV2, captchaTools} from "@aqpdev/react-multi-captcha";
 
 export function Page()
 {
@@ -121,7 +121,7 @@ In the example above the captchaTools.solvemediaResponse will return a JSON data
 params to validate the captcha:
 ```json
     { 
-        adcopy_challenge: "2@OcL8CfF6AXq5V79D.or2-J7...Snm34n", 
+        adcopy_challenge: "2@OcL8CfF6AXq5V79D.or2J7Snm34ew13313sd13rn", 
         adcopy_response: "magic eight ball" 
     }
 ```
