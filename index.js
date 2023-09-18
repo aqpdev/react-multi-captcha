@@ -1,3 +1,4 @@
+"use client";
 import React, {useEffect, useRef} from "react"
 
 export const captchaTools = {
@@ -67,7 +68,7 @@ export function RecaptchaV2({siteKey, callback, className, theme})
         return () => document.body.removeChild(script);
     }, [])
     return (
-        <div className={className} ref={refInput}/>
+        React.createElement("div", {className: className, ref: refInput})
     )
 }
 
@@ -108,7 +109,7 @@ export function RecaptchaV3({siteKey, callback})
     }, [])
 
     return (
-        <></>
+        React.createElement("div")
     )
 }
 
@@ -155,7 +156,7 @@ export function SolveMedia({siteKey, className, theme})
     }, [])
 
     return (
-        <div className={className} ref={refInput} id="solveMediaContainer"/>
+        React.createElement("div", {className: className, ref: refInput, id: "solveMediaContainer"})
     )
 }
 
@@ -201,7 +202,7 @@ export function HCaptcha({siteKey, callback, className, theme})
     }, [])
 
     return (
-        <div className={className} ref={refInput}/>
+        React.createElement("div", {className: className, ref: refInput})
     )
 }
 
@@ -209,24 +210,24 @@ export function Captcha({type, siteKey, recaptcha_version, className, callback, 
     if(type === 'recaptcha') {
         if (parseInt(recaptcha_version) === 3) {
             return (
-                <RecaptchaV3 siteKey={siteKey} callback={callback}/>
+                React.createElement(RecaptchaV3, {siteKey: siteKey, callback: callback})
             )
         } else {
             return (
-                <RecaptchaV2 className={className} siteKey={siteKey} callback={callback} theme={theme}/>
+                React.createElement(RecaptchaV2, {className: className, siteKey: siteKey, callback: callback, theme: theme})
             )
         }
     }else if(type === "solvemedia"){
         return(
-            <SolveMedia className={className} siteKey={siteKey} theme={theme}/>
+            React.createElement(SolveMedia, {className: className, siteKey: siteKey, theme: theme})
         )
     }else if(type === "hcaptcha"){
         return(
-            <HCaptcha className={className} siteKey={siteKey} theme={theme} callback={callback}/>
+            React.createElement(HCaptcha, {className: className, siteKey: siteKey, theme: theme, callback: callback})
         )
     }else{
         return (
-            <></>
+            React.createElement('div')
         )
     }
 }
